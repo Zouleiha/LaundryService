@@ -6,6 +6,4 @@
         $system->redirectToLoginPage();
     }
 
-    echo "Welcome User";
-
-    ?>
+    echo "Welcome Admin";
