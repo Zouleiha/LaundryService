@@ -91,7 +91,7 @@
 			header("refresh:0; url=$url");
 		}
 		public function isSessionSet(){
-			if(isset($_SESSION["email"]) == FALSE || isset($_SESSION["password"]) == FALSE){
+			if(isset($_SESSION["email"]) == FALSE){
 				return FALSE;
 			}
 			return TRUE;
