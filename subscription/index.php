@@ -1,3 +1,5 @@
+<?php include('./../inc/customerHeader.php'); ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscription Form</title>
-    <link rel="stylesheet" href="styles/customerStyles.css">
+    <link rel="stylesheet" href="./../styles/customerStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
@@ -68,3 +70,7 @@
   </div>
 </body>
 </html>
+
+
+
+<?php include('./../inc/customerFooter.php'); ?>
