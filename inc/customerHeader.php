@@ -47,16 +47,7 @@
                 </li>
 
                 <li>
-                    <a href="./../order/index.php">
-                        <span class="icon">
-                            <ion-icon name="bus-outline"></ion-icon>
-                        </span>
-                        <span class="title">Order</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="./../subscription/index.php">
+                    <a href="./../Subscription/index.php">
                         <span class="icon">
                             <ion-icon name="notifications-circle-outline"></ion-icon>
                         </span>
@@ -93,3 +84,13 @@
                     <img src="./../Images/imgs/customer02.jpg" alt="">  
               </div>
             </div>
+                <!-- =========== Scripts =========  -->
+    <script src="JS/CusPage.js"></script>
+
+<!-- ====== ionicons ======= -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+<body>

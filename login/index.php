@@ -17,8 +17,6 @@
             <div class="front">
                 <img src="./../Images/imagesfront.jpg" alt="">
                 <div class="text">
-                    
-                   <!--  <span class="text-2">Give your clothes</span> -->
 
                 </div>
             </div>
