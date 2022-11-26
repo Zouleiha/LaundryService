@@ -1,24 +1,10 @@
-<?php
-    // Connection to database
-    // require('./../config/config.php');
-    // require('./../config/db.php');
-
-    $msg = '';
-    $msgClass = '';
-    $query = '';
-    $result = '';
-
-    
-?>
-
 <?php include('login.php'); ?>
-<?php include('signup.php'); ?>
 
 <html lang="en" dir="Itr">
 <head>
     <meta charset="UTF-8">
    <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge">  -->
-    <title>Signin-Signup</title>
+    <title>Signin to IUT Laundry service</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./../styles/loginStyles.css">
 
@@ -66,7 +52,11 @@
                     <div class="input-boxes">
                         <div class="input-box">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="studentid" placeholder="Enter your student ID">
+                            <input type="text" name="signupid" placeholder="Enter your student ID">
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" name="name" placeholder="Enter your full name">
                         </div>
                         <div class="input-box">
                             <i class="fas fa-envelope"></i>
@@ -86,7 +76,7 @@
                         </div>
                         <div class="input-box">
                             <i class="fas fa-lock"></i>
-                            <input type="number" name="customer_phone" placeholder="Enter your phone number">
+                            <input type="text" name="customer_phone" placeholder="Enter your phone number">
                         </div>
                         <div class="button input-box"> 
                             <input type="submit" name="signup" value="SIGNUP">

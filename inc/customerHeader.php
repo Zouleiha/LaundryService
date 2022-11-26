@@ -1,8 +1,11 @@
 <?php
-    // Connection to database
-    require('./../config/config.php');
-    require('./../config/db.php');
-    require('./../config/session.php');
+    include("../system.php");
+    $system = System::getSystem();
+
+    if(!$system->isSessionSet()){
+        $system->redirectToLoginPage();
+    }
+    $user = $system->getCustomerInformation($_SESSION['email']);
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IUT Laundry Service</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="./../styles/CuLandstyle.css">
+    <link rel="stylesheet" href="./../styles/customerStyles.css">
 </head>
 
 <body>
@@ -35,7 +38,7 @@
                 <h2> Customer Page Details</h2>
                 
                 <li>
-                    <a href="./../Profile/index.php">
+                    <a href="./../home/index.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -44,16 +47,16 @@
                 </li>
 
                 <li>
-                    <a href="./../Usage/index.php">
+                    <a href="./../order/index.php">
                         <span class="icon">
                             <ion-icon name="bus-outline"></ion-icon>
                         </span>
-                        <span class="title">Usage</span>
+                        <span class="title">Order</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="./../Subscription/index.php">
+                    <a href="./../subscription/index.php">
                         <span class="icon">
                             <ion-icon name="notifications-circle-outline"></ion-icon>
                         </span>
@@ -62,7 +65,7 @@
                 </li>
 
                 <li>
-                    <a href="./../Transactions/index.php">
+                    <a href="./../transactions/index.php">
                         <span class="icon">
                             <ion-icon name="cash-outline"></ion-icon>
                         </span>

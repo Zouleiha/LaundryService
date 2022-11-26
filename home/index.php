@@ -1,11 +1,7 @@
-<?php
-    include("../system.php");
-    $system = System::getSystem();
+<?php include('./../inc/customerHeader.php'); ?>
 
-    if(!$system->isSessionSet()){
-        $system->redirectToLoginPage();
-    }
+<?php 
+    echo 'Welcome '.$user['customer_name']; 
+?>
 
-    echo "Welcome User";
-
-    ?>
+<?php include('./../inc/customerFooter.php'); ?>
