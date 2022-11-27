@@ -47,7 +47,16 @@
                 </li>
 
                 <li>
-                    <a href="./../Subscription/index.php">
+                    <a href="./../order/index.php">
+                        <span class="icon">
+                           <ion-icon name="bicycle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Order</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./../subscription/index.php">
                         <span class="icon">
                             <ion-icon name="notifications-circle-outline"></ion-icon>
                         </span>
