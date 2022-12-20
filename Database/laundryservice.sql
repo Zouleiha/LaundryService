@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 24, 2022 at 03:01 PM
+-- Generation Time: Dec 20, 2022 at 10:48 AM
 -- Server version: 8.0.31
 -- PHP Version: 7.4.32
 
@@ -60,11 +60,11 @@ CREATE TABLE `balance` (
 
 CREATE TABLE `customers` (
   `customer_id` bigint NOT NULL,
-  `customer_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `customer_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `customer_email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `customer_password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `customer_phone` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `customer_address` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `customer_phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `customer_address` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `customer_image` mediumblob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -73,7 +73,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_password`, `customer_phone`, `customer_address`, `customer_image`) VALUES
-(190041245, NULL, 'gandega@iut-dhaka.edu', '123', '123456', '308', NULL);
+(190041245, 'Gandega Abubakar', 'gandega@iut-dhaka.edu', '123', '1234567890', '308', NULL),
+(190041247, 'Zouleiha', 'zouleiha@iut-dhaka.edu', '1234', '12345678', '444', NULL);
 
 -- --------------------------------------------------------
 
@@ -112,9 +113,19 @@ CREATE TABLE `transactions` (
   `id` bigint NOT NULL,
   `customer_id` bigint NOT NULL,
   `date_of_transaction` date NOT NULL,
+  `transaction_timestamp` timestamp NOT NULL,
   `amount_required` int NOT NULL,
   `amount_paid` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`id`, `customer_id`, `date_of_transaction`, `transaction_timestamp`, `amount_required`, `amount_paid`) VALUES
+(1, 190041245, '2022-11-28', '2022-11-27 11:57:13', 200, 250),
+(2, 190041245, '2022-11-27', '2022-11-27 11:57:13', 200, 150),
+(3, 190041245, '2022-11-16', '2022-11-27 11:57:13', 400, 400);
 
 --
 -- Indexes for dumped tables
@@ -172,7 +183,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
