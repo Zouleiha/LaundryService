@@ -16,7 +16,7 @@
 		public function initialize(){
 			$this->dbservername = "localhost";
 			$this->dbusername = "root";
-			$this->dbpassword = "orclpass";
+			$this->dbpassword = "";
 			$this->dbname = "laundryservice";
 			$this->UNSPECIFIED = "unspecified";
 			$this->UserEmail = $this->UNSPECIFIED;
