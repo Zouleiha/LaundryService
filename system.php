@@ -127,6 +127,14 @@
 			$result = $this->dbconn->query($sql);
 			$this->disconnectWithDatabase();
 		}
+		public function placeOrder($number,$list){
+			$id = $user['customer_id'];
+			$sql = "INSERT INTO orders (customer_id, number_of_items, items_list) 
+			VALUES ($id, '$number', '$list')";
+			$this->connectWithDatabase();
+			$result = $this->dbconn->query($sql);
+			$this->disconnectWithDatabase();
+		}
 		public function getCustomerInformation($email){
 			$sql = "SELECT * FROM customers WHERE customer_email = '$email'";
 			if($this->isDataexists($sql)){
