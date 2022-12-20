@@ -26,7 +26,7 @@
     <?php 
     $userEmail = ""; 
     if(isset($_POST['subscribe'])){ 
-      $userEmail = $_POST['customer_email']; 
+      $userEmail = $_POST['email']; 
       if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){ 
         $subject = "Thanks for Subscribing us";
         $message = "Thanks for subscribing to our blog. You'll always receive updates from us. And we won't share and sell your information.";
