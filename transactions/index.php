@@ -1,9 +1,11 @@
 <?php include('./../inc/customerHeader.php'); ?>
 
-<div class="details">
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Transactions</h2>
+                        <h2>Recent Orders</h2>
                     </div>
 
                     <table>
@@ -35,9 +37,7 @@
                             }
                         ?>
                         </tbody>
-                    </table>
-                   
-                </div>
-
+                  </table>                 
+                        </div>     
 
 <?php include('./../inc/customerFooter.php'); ?>
