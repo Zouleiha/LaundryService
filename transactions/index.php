@@ -11,6 +11,7 @@
                         <table>
                             <thead>
                                 <tr>
+                                    <td></td>
                                     <td>Date</td>
                                     <td>Amount required</td>
                                     <td>Amount paid</td>
@@ -30,6 +31,7 @@
                                     $amount_paid = $row["amount_paid"];
 
                                     echo "<tr>
+                                            <td>$id</td>
                                             <td>$date_of_transaction</td>
                                             <td>$amount_required</td>
                                             <td>$amount_paid</td>

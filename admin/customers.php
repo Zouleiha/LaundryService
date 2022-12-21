@@ -1,41 +1,39 @@
-<div class="details">
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Recent Orders</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
+<table>
+    <caption><font size="9"><b>Customers</b></font></caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Address</th>
+        </tr>
+    </thead>
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Date</td>
-                                <td>Amount required</td>
-                                <td>Amount paid</td>
-                            </tr>
-                        </thead>
+    <tbody>
+    
+    <?php
+        $result = $system->getTableContent('customers');
+        $id = 0;
 
-                        <tbody>
-                        
-                        <?php
-                            $result = $system->getTableContent('transactions');
-                            $id = 0;
+        while($row = $result->fetch_assoc()){
+            $id = $id + 1;
+            $c_id = $row["customer_id"];
+            $name = $row["customer_name"];
+            $email = $row["customer_email"];
+            $number = $row["customer_phone"];
+            $address = $row["customer_address"];
 
-                            while($row = $result->fetch_assoc()){
-                                $id = $id + 1;
-                                $date_of_transaction = $row["date_of_transaction"];
-                                $amount_required = $row["amount_required"];
-                                $amount_paid = $row["amount_paid"];
-
-                                echo "<tr>
-                                        <td>$date_of_transaction</td>
-                                        <td>$amount_required</td>
-                                        <td>$amount_paid</td>
-                                    </tr>";
-                            }
-                        ?>
-                        </tbody>
-                    </table>
-                   
-                </div>
-                
-            </div>
+            echo "<a href=\"customerDetails.php?customerID=$c_id\"><tr>
+                    <td>$id</td>
+                    <td>$c_id</td>
+                    <td>$name</td>
+                    <td>$email</td>
+                    <td>$number</td>
+                    <td>$address</td>
+                </tr></a>";
+        }
+    ?>
+    </tbody>
+</table>
