@@ -10,8 +10,8 @@
     <header> 
         <h2> Your Page, Dear Customer </h2>
        <div class="center-text">
-        <form class="form" action="CustList.html" method="post" >
-        
+        <p class="form" action="CustList.html" method="" >
+
             <input type="text" name="" placeholder="Name" id="username">
             <input type="id" name="" placeholder="ID" id="Id">
             <input type="email" name="" placeholder="Email" id="email">
@@ -19,8 +19,9 @@
             <input type="address" name="" placeholder="Address" id="address">
             <input type="text" name="" placeholder="Date joinned" id="Date">
             <input type="submit" value="Go Back" onclick="validate()">                 
-        </form>
+        </p>
        </div>
+       </table>
     </header>
     <script src="./../JS/main.js"></script>
 </body>

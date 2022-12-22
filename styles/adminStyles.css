@@ -11,12 +11,11 @@
 }
 
 :root {
-  --blue: #2a2185;
   --white: #fff;
   --gray: #f5f5f5;
   --black1: #222;
-  --black2: #999; 
-  --red: #d93838;  
+  --black2: #999;
+   --peach: #da6060;
 }
 
 body {
@@ -26,7 +25,8 @@ body {
 
 .container {
   position: relative;
-  width: 100%; 
+  width: 100%;
+  
 }
 
 /* =============== Navigation ================ */
@@ -35,8 +35,8 @@ body {
   position: fixed;
   width: 300px;
   height: 100%;
-  background: var(--blue);
-  border-left: 10px solid var(--blue);
+  background: var(--peach);
+  border-left: 10px solid var(--peach);
   transition: 0.5s;
   overflow: hidden;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 
-.navigation ul li:nth-child(1) {
+.navigation ul li:nth-child(1) { /* not yet*/
   margin-bottom: 40px;
   pointer-events: none;
 }
@@ -75,7 +75,7 @@ body {
 }
 .navigation ul li:hover a,
 .navigation ul li.hovered a {
-  color: var(--white);
+  color: var(--black2);
 }
 
 .navigation ul li a .icon {
@@ -249,7 +249,7 @@ body {
 }
 
 .cardBox .card:hover {
-  background: var(--blue);
+  background: var(--peach);
 }
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
@@ -286,12 +286,12 @@ body {
 }
 .cardHeader h2 {
   font-weight: 600;
-  color: var(--blue);
+  color: var(--peach);
 }
 .cardHeader .btn {
   position: relative;
   padding: 5px 10px;
-  background: var(--blue);
+  background: var(--peach);
   text-decoration: none;
   color: var(--white);
   border-radius: 6px;
@@ -313,7 +313,7 @@ body {
   border-bottom: none;
 }
 .details .recentOrders table tbody tr:hover {
-  background: var(--blue);
+  background: var(--peach);
   color: var(--white);
 }
 .details .recentOrders table tr td {
@@ -338,7 +338,7 @@ body {
 }
 .status.pending {
   padding: 2px 4px;
-  background: #4b73a7;
+  background: #c1ec5d;
   color: var(--white);
   border-radius: 4px;
   font-size: 14px;
@@ -390,7 +390,7 @@ body {
   color: var(--black2);
 }
 .recentCustomers table tr:hover {
-  background: var(--blue);
+  background: var(--peach);
   color: var(--white);
 }
 .recentCustomers table tr:hover td h4 span {
