@@ -48,16 +48,12 @@
         <form class="form" action="employeeAdd.php" method="post" >
         
             <input type="text" name="name" placeholder="Name" id="username">
-            <input type="text" name="designation" placeholder="Designation" id="Designation">
-            <datalist type="text" id="Designation">
-                            <option value="Chocolate">
-                            <option value="Strawberry">
-                            <option value="Lemon">
-                            <option value="Banana">
-                            <option value="Coconut">
-                            <option value="Vanilla">
-                            <option value="Carrot">
-                        </datalist>
+            <input list="Designation" type="text" name="designation" placeholder="Designation" id="Designation">
+            <datalist id="Designation">
+                <option value="Delivery man">
+                <option value="laundry man">
+                <option value="Supervisor">
+            </datalist>
             <input type="phone" name="number" placeholder="Phone number" id="phone">
             <input type="address" name="address" placeholder="Address" id="address">
             <input type="submit" value="Submit" name="submit">                 
