@@ -62,15 +62,17 @@
                                     <td>$number</td>
                                     <td>$address</td>
                                     <td>
-                                        <a class='btn btn-primary btn-sm' href = 'customerDetails.php'>See more</a>
-                                        <a class='btn btn-primary btn-sm' href = ''>Update</a>
-                                        <a class='btn btn-primary btn-sm' href = ''>Delete</a>
+                                        <a class='btn btn-primary btn-sm' href = 'customerDetails.php?email=$email'>See more</a>
+                                        <a class='btn btn-primary btn-sm' href = 'customerUpdate.php?email=$email'>Update</a>
+                                        <a class='btn btn-primary btn-sm' href = 'customerDelete.php?email=$email'>Delete</a>
                                     </td>
                                 </tr></a>";
                         }
                     ?>
                     </tbody>
                 </table>
+
+                <button><a href="customerAdd.php">Add customer</a></button>
                    
                 </div>
 

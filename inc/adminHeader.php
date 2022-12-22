@@ -38,7 +38,7 @@
                 <li>
                     <a href="./../admin/index.php">
                         <span class="icon">
-                            <ion-icon name="extension-puzzle-outline"></ion-icon>
+                            <ion-icon name="home-outline"></ion-icon>
                         </span>
                         <span class="title">Dashboard</span>
                     </a>

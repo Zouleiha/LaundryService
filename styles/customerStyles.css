@@ -550,7 +550,8 @@ td:before{
 }
 .form input[type="text"],.form input[type="id"],
 .form input[type="email"], .form input[type="number"],
-.form input[type="phone"], .form input[type="address"]
+.form input[type="phone"], .form input[type="address"], 
+.form input[type="password"]
 {
     border: 0;
     background: #ffc0cb;
@@ -566,7 +567,8 @@ td:before{
 }
 .form input[type="text"]:focus,.form input[type="id"]:focus,
 .form input[type="email"]:focus, .form input[type="number"]:focus,
-.form input[type="phone"]:focus, .form input[type="address"]:focus
+.form input[type="phone"]:focus, .form input[type="address"]:focus,
+.form input[type="password"]:focus
 {
         width: 250px;
         border-color: #5447a0;

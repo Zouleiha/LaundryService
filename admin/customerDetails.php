@@ -1,25 +1,60 @@
+<?php
+    include("../system.php");
+    $system = System::getSystem();
+
+    if(!$system->isSessionSet()){
+        $system->redirectToLoginPage();
+    }
+    
+    $email = $_GET["email"];
+
+    if(isset($email)){
+        $result = $system->getCustomerInformation($email);
+    
+            $c_id = $result["customer_id"];
+            $name = $result["customer_name"];
+            $email = $result["customer_email"];
+            $number = $result["customer_phone"];
+            $address = $result["customer_address"];    
+    }else{
+        $system->redirectToPage("customers.php");
+    }
+
+    ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../styles/customerStyles.css">
-    <title> Customer </title>
+    <title> Customer - <?php echo $name;?> </title>
 </head>
 <body>
     <header> 
-        <h2> Your Page, Dear Customer </h2>
        <div class="center-text">
-        <p class="form" action="CustList.html" method="" >
-
-            <input type="text" name="" placeholder="Name" id="username">
-            <input type="id" name="" placeholder="ID" id="Id">
-            <input type="email" name="" placeholder="Email" id="email">
-            <input type="phone" name="" placeholder="Phone number" id="phone">
-            <input type="address" name="" placeholder="Address" id="address">
-            <input type="text" name="" placeholder="Date joinned" id="Date">
-            <input type="submit" value="Go Back" onclick="validate()">                 
-        </p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><?php echo $name ?></td>
+            </tr>
+            <tr>
+                <th>Student ID</th>
+                <td><?php echo $c_id ?></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><?php echo $email ?></td>
+            </tr>
+            <tr>
+                <th>Phone number</th>
+                <td><?php echo $number ?></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><?php echo $address ?></td>
+            </tr>
+        </table>
        </div>
        </table>
     </header>
