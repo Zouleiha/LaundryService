@@ -1,70 +1,4 @@
-<?php
-    include("../system.php");
-    $system = System::getSystem();
-
-    if(!$system->isSessionSet()){
-        $system->redirectToLoginPage();
-    }
-
-    ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="./../styles/adminStyles.css">
-</head>
-
-<body>
-    <!-- =============== Navigation ================ -->
-    <div class="container">
-        <div class="navigation">
-            
-            <ul>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="aperture-outline"></ion-icon>
-                        </span>
-                        <span class="title">Laundry Service</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="extension-puzzle-outline"></ion-icon>
-                        </span>
-                        <span class="title">Activities</span>
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title" >Customers</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">Employees</span>
-                    </a>
-                </li>
-
-                </ul>
-            
-        </div>
+<?php include("./../inc/adminHeader.php"); ?>
 
         <!-- ========================= Main ==================== -->
         <div class="main">
@@ -92,7 +26,7 @@
             <div class="details">
                 <div class="recentOrders">
 
-                    <?php include("customers.php"); ?>
+                    
                    
                 </div>
 
@@ -100,14 +34,5 @@
                 
             </div>
         </div>
-    </div>
 
-    <!-- =========== Scripts =========  -->
-    <script src="./../JS/main.js"></script>
-
-    <!-- ====== ionicons ======= -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
-</html>
+        <?php include("./../inc/adminFooter.php"); ?>
