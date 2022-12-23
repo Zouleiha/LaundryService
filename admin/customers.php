@@ -62,7 +62,7 @@
                                     <td>$number</td>
                                     <td>$address</td>
                                     <td>
-                                        <a class='btn btn-primary btn-sm' href = 'customerDetails.php?email=$email'>See more</a>
+                                        <a class='btn btn-danger btn-sm' href = 'customerDetails.php?email=$email'>See more</a>
                                         <a class='btn btn-primary btn-sm' href = 'customerUpdate.php?email=$email'>Update</a>
                                         <a class='btn btn-primary btn-sm' href = 'customerDelete.php?email=$email'>Delete</a>
                                     </td>

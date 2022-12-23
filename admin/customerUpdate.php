@@ -30,8 +30,8 @@
         filter_has_var(INPUT_POST, 'number')){
 
             // Checking for duplicates before signing up
-            if(!$system->isUserexists($email)){
-                    $system->addCustomer($id, $name, $email, $password, $address, $number);
+            if($_GET['email'] == $_POST['email']){
+                    $system->updateCustomer($id, $name, $email, $password, $address, $number);
                     if($system->isUserexists($email)){
                         $system->showAlertMessage("Customer account has been created");
                         header('Location: index.php');
@@ -39,7 +39,7 @@
                         $system->showAlertMessage("Failed to create account");
                     }
             }else{
-                $system->showAlertMessage("User already exists");
+                $system->showAlertMessage("Invalid Email");
             }
         } else{
             $system->showAlertMessage("Enter all required fields");
@@ -61,12 +61,12 @@
        <div class="center-text">
         <form class="form" action="customerAdd.php" method="post" >
         
-            <input type="text" name="name" placeholder="Name" id="username">
-            <input type="id" name="id" placeholder="ID" id="Id">
-            <input type="email" name="email" placeholder="Email" id="email">
+            <input type="text" name="name" value=<?php echo $c_name ?> placeholder="Name" id="username">
+            <input type="id" name="id" value=<?php echo $c_id ?> placeholder="ID" id="Id">
+            <input type="email" name="email" value=<?php echo $c_email ?> placeholder="Email" id="email">
             <input type="number" name="password" placeholder="Password" id="password">
-            <input type="phone" name="number" placeholder="Phone number" id="phone">
-            <input type="address" name="address" placeholder="Address" id="address">
+            <input type="phone" name="number" value=<?php echo $c_number ?> placeholder="Phone number" id="phone">
+            <input type="address" name="address" value=<?php echo $c_address ?> placeholder="Address" id="address">
             <input type="submit" value="Submit" name="submit">                 
         </form>
        </div>

@@ -127,6 +127,14 @@
 			$result = $this->dbconn->query($sql);
 			$this->disconnectWithDatabase();
 		}
+		public function updateCustomer($id, $name, $email, $password, $address, $phone){
+			$sql = "UPDATE customers (customer_id, customer_name, customer_email, customer_password, customer_address, customer_phone) 
+			VALUES ($id, '$name', '$email', '$password', '$address', '$phone')
+			WHERE customer_email='$email'";
+			$this->connectWithDatabase();
+			$result = $this->dbconn->query($sql);
+			$this->disconnectWithDatabase();
+		}
 		public function placeOrder($number,$list){
 			$id = $user['customer_id'];
 			$sql = "INSERT INTO orders (customer_id, number_of_items, items_list) 
