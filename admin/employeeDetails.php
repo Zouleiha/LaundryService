@@ -6,7 +6,7 @@
         $system->redirectToLoginPage();
     }
     
-    $e_id = $_GET["e_id"];
+    $e_id = $_GET["id"];
 
     if(isset($e_id)){
         $result = $system->getEmployeeInformation($e_id);
@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <th>Employee ID</th>
-                <td><?php echo $c_id ?></td>
+                <td><?php echo $e_id ?></td>
             </tr>
             <tr>    
                 <th>Designation</th>

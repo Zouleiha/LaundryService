@@ -1,4 +1,8 @@
-<?php include("./../inc/adminHeader.php"); ?>
+<?php include("./../inc/adminHeader.php");
+
+    
+
+?>
 
         <!-- ========================= Main ==================== -->
         <div class="main">
