@@ -1,6 +1,7 @@
 <?php include('./../inc/customerHeader.php'); ?>
 
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -19,57 +20,42 @@
     </label>
     <div class="icon"><i class="far fa-envelope"></i></div>
     <div class="content">
-      <header>Become a member by Subscribing </header>
-      <p>Subscribe to our webpage and get inbox message in your email.</p>
     </div>
+
     <form action="index.php" method="POST">
-    <?php 
-    $userEmail = ""; 
-    if(isset($_POST['subscribe'])){ 
-      $userEmail = $_POST['email']; 
-      if(filter_var($userEmail, FILTER_VALIDATE_EMAIL)){ 
-        $subject = "Thanks for Subscribing us";
-        $message = "Thanks for subscribing to our blog. You'll always receive updates from us. And we won't share and sell your information.";
-        $sender = "From: adt@gmail.com";
-        //php function to send mail
-        if(mail($userEmail, $subject, $message, $sender)){
-          ?>
-          
-          <div class="alert success-alert">
-            <?php echo "Thanks for Subscribing." ?>
-          </div>
-          <?php
-          $userEmail = "";
-        }else{
-          ?>
-          
-          <div class="alert error-alert">
-          <?php echo "Failed while sending your mail!" ?>
-          </div>
-          <?php
-        }
-      }else{
-        ?>
-        
-        <div class="alert error-alert">
-          <?php echo "$userEmail is not a valid email address!" ?>
-        </div>
-        <?php
-      }
-    }
-    ?>
+    
       <div class="field">
-        <input type="text" class="email" name="email" placeholder="Email Address" required value="<?php echo $userEmail ?>">
+        <h4> <label> Subscription Type
+                <input list="Subscription Type">
+                <datalist id="Subscription Type">
+                    <option value="Weekly"> Weekly </option>
+                    <option value="Bi-Weekly"> Bi-Weekly </option>
+                    <option value="Monthly"> Monthly </option>
+                </datalist>
+            </label> </h4>
+            <h4>  <label>
+                Clothing items: 
+                <a> <input list="Clothing items">
+                 <datalist id="Clothing items">
+                     <option value="Trouser"> Trouser</option>
+                     <option value="Shirt"> Shirt </option>
+                     <option value="Gown"> Gown </option>
+                 </datalist>  </a>,    
+                  <br>        
+                         <input type="number" value="" placeholder="Enter the number of items">
+                         <button id="Add" > + </button>  </label> </h4>
       </div>
+      
       <div class="field btn">
         <div class="layer"></div>
         <button type="submit" name="subscribe">Subscribe</button>
       </div>
     </form>
-    <div class="text">Your information is confidential.</div>
-  </div>
+  <script src="main.js"> </script>
 </body>
 </html>
+
+
 
 
 

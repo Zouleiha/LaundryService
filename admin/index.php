@@ -22,17 +22,56 @@
 
 
 
-            <!-- ================ Order Details List ================= -->
-            <div class="details">
-                <div class="recentOrders">
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers"> 20 </div>
+                        <div class="cardName">Customers</div>
+                    </div>
 
-                    
-                   
+                    <div class="iconBx">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
                 </div>
 
-                <!-- ================= New Customers ================ -->
+                <br>
+               
+                <div class="card">
+                    <div>
+                        <div class="numbers">8</div>
+                        <div class="cardName">Employees</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <br>
+               
+                <div class="card">
+                    <div>
+                        <div class="numbers">24</div>
+                        <div class="cardName">Feedback</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
                 
+                <br>
+               
+                <div class="card"> 
+                    <div>
+                        <div class="numbers">$7,842</div>
+                        <div class="cardName">Earning</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
             </div>
-        </div>
 
         <?php include("./../inc/adminFooter.php"); ?>
