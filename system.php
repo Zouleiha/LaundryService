@@ -127,6 +127,13 @@
 			$result = $this->dbconn->query($sql);
 			$this->disconnectWithDatabase();
 		}
+		public function addEmployee($name, $designation, $address, $phone){
+			$sql = "INSERT INTO employees (employee_name, employee_designation, employee_address, employee_phone) 
+			VALUES ('$name', '$designation', '$address', '$phone')";
+			$this->connectWithDatabase();
+			$result = $this->dbconn->query($sql);
+			$this->disconnectWithDatabase();
+		}
 		public function updateCustomer($id, $name, $email, $password, $address, $phone){
 			$sql = "UPDATE customers (customer_id, customer_name, customer_email, customer_password, customer_address, customer_phone) 
 			VALUES ($id, '$name', '$email', '$password', '$address', '$phone')
@@ -145,6 +152,14 @@
 		}
 		public function getCustomerInformation($email){
 			$sql = "SELECT * FROM customers WHERE customer_email = '$email'";
+			if($this->isDataexists($sql)){
+				$result = $this->executeQuery($sql);
+				return mysqli_fetch_assoc($result);
+			}
+			return FALSE;
+		}
+		public function getEmployeeInformation($e_id){
+			$sql = "SELECT * FROM employees WHERE employee_id = '$e_id'";
 			if($this->isDataexists($sql)){
 				$result = $this->executeQuery($sql);
 				return mysqli_fetch_assoc($result);

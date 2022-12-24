@@ -20,7 +20,7 @@
                     $system->addCustomer($id, $name, $email, $password, $address, $number);
                     if($system->isUserexists($email)){
                         $system->showAlertMessage("Customer account has been created");
-                        header('Location: index.php');
+                        header('Location: customers.php');
                     }else{
                         $system->showAlertMessage("Failed to create account");
                     }

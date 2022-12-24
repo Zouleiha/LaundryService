@@ -49,7 +49,7 @@
                         <span class="icon">
                             <ion-icon name="extension-puzzle-outline"></ion-icon>
                         </span>
-                        <span class="title">Activities</span>
+                        <span class="title">Orders</span>
                     </a>
                 </li>
             

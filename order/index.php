@@ -1,10 +1,5 @@
 <?php include('./../inc/customerHeader.php'); ?>
 
-<?php 
-    echo "Place your orders here"; 
-?>
-
-
  <!DOCTYPE html>
 
  <html lang="en">
@@ -26,23 +21,27 @@
      <div class="content">
      </div>
  
-     <form action="index.php" method="POST">
+     <form action="order.php" method="POST">
         <div class="field">
-             <h4>  <label>
+             <h4> 
+               <label>
                  Clothing items: 
                  <a> <input list="Clothing items">
                   <datalist id="Clothing items">
                       <option value="Trouser"> Trouser</option>
                       <option value="Shirt"> Shirt </option>
                       <option value="Gown"> Gown </option>
-                  </datalist>  </a>,   <br> <br>          
+                  </datalist>  
+                </a>,   <br> <br>          
                           <input type="number" value="" placeholder="Enter the number of items">
-                          <button id="Add" > + </button>  </label> </h4>
+                          <button id="Add" > + </button>  
+                </label> 
+              </h4>
        </div>
        
        <div class="field btn">
          <div class="layer"></div>
-         <button type="submit" name="Order">Place Order</button>
+         <button type="submit" name="order">Place Order</button>
        </div>
      </form>
    <script src="main.js"> </script>

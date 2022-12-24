@@ -26,7 +26,49 @@
             <div class="details">
                 <div class="recentOrders">
 
+                <table>
+                    <caption><font size="9"><b>Orders</b></font></caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Order ID</th>
+                            <th>Customer ID</th>
+                            <th>Number of items</th>
+                            <th>Items list</th>
+                            <th>Employee assigned</th>
+                            <th>Employee ID</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
                     
+                    <?php
+                        $result = $system->getTableContent('orders');
+                        $id = 0;
+
+                        while($row = $result->fetch_assoc()){
+                            $id = $id + 1;
+                            $o_id = $row["order_id"];
+                            $c_id = $row["customer_id"];
+                            $number = $row["number_of_items"];
+                            $list = $row["items_list"];
+                            $e_assigned = $row["employee_assigned"];
+                            $e_id = $row["employee_id"];
+
+                            echo "<a href=\"customerDetails.php?customerID=$c_id\"><tr>
+                                    <td>$id</td>
+                                    <td>$o_id</td>
+                                    <td>$c_id</td>
+                                    <td>$number</td>
+                                    <td>$list</td>
+                                    <td>$e_assigned</td>
+                                    <td>$e_id</td>
+                                    
+                                </tr></a>";
+                        }
+                    ?>
+                    </tbody>
+                </table>
                    
                 </div>
 

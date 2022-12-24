@@ -61,9 +61,9 @@
                                     <td>$number</td>
                                     <td>$address</td>
                                     <td>
-                                    <a class='btn btn-primary btn-sm' href = 'employeeDetails.php?email=$email'>See more</a>
-                                    <a class='btn btn-primary btn-sm' href = 'employeeUpdate.php?email=$email'>Update</a>
-                                    <a class='btn btn-primary btn-sm' href = 'employeeDelete.php?email=$email'>Delete</a>
+                                    <a class='btn btn-primary btn-sm' href = 'employeeDetails.php?id=$e_id'>See more</a>
+                                    <a class='btn btn-primary btn-sm' href = 'employeeUpdate.php?id=$e_id'>Update</a>
+                                    <a class='btn btn-primary btn-sm' href = 'employeeDelete.php?id=$e_id'>Delete</a>
                                 </td>
                                 </tr>";
                         }

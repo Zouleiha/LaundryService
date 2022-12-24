@@ -6,12 +6,12 @@
         $system->redirectToLoginPage();
     }
     
-    $email = $_GET["email"];
+    $e_id = $_GET["e_id"];
 
-    if(isset($email)){
-        $result = $system->getCustomerInformation($email);
+    if(isset($e_id)){
+        $result = $system->getEmployeeInformation($e_id);
     
-            $c_id = $result["employee_id"];
+            $e_id = $result["employee_id"];
             $name = $result["employee_name"];
             $designation = $result["employee_designation"];
             $number = $result["employee_phone"];
@@ -39,7 +39,7 @@
                 <td><?php echo $name ?></td>
             </tr>
             <tr>
-                <th>Student ID</th>
+                <th>Employee ID</th>
                 <td><?php echo $c_id ?></td>
             </tr>
             <tr>    
