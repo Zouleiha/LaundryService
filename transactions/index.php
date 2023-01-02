@@ -1,23 +1,25 @@
-<?php include('./../inc/customerHeader.php'); ?>
+<?php include('./../inc/customerHeader.php'); 
+    
+    $user = $system->getCustomerInformation($_SESSION['email']);
+?>
 
+            <div class="show">
+                <div class="profile">
+                    <div class="cardHeader1">
+                        <h2> Transaction Details </h2>
+                </div>
 
-            <!-- ================ Order Details List ================= -->
-            <div class="details">
-                <div class="recentOrders">
-                    <div class="cardHeader">
-                        <h2>Recent Orders</h2>
-                    </div>
-
-                        <table>
+                   
+                    <table>
                             <thead>
                                 <tr>
-                                    <td></td>
+                                    <td> ID </td>                                    
                                     <td>Date</td>
                                     <td>Amount required</td>
                                     <td>Amount paid</td>
                                 </tr>
                             </thead>
-
+                            
                             <tbody>
                             
                             <?php
@@ -40,7 +42,8 @@
                             ?>
                             </tbody>
                         </table> 
-                </div>  
-            </div>   
-
-<?php include('./../inc/customerFooter.php'); ?>
+                     </div>
+                </div>   
+          </div>
+    
+      <?php include('./../inc/customerFooter.php'); ?>

@@ -215,7 +215,7 @@ body {
 }
 
 
-/* ==================  Details List ============== */
+/* ==================  profile List ============== */
 .show {
   position: relative;
   width: 100%;
@@ -270,50 +270,73 @@ body {
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
-table{
-  width: 100%;
-  border-collapse: collapse;
-}
-.detail thead,tbody{
-  width: 100%;
-  text-align: center;
-}
-.detail th,td{
-  padding: 1rem 10px;
-  border: 1px solid #000000;
-}
-th{
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-  background-color: var(--black2);
-  font-family: sans-serif;
-}
-.detail table .td{
-  font-size: 18px;
-  font-family: sans-serif;
-  font-weight: lighter;
+.details .recentOrders {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
 }
 
-.detail table tr td {
-  padding: 12px 10px;
-  border-collapse: collapse
+.details .cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.detail table tr td h2 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2rem;
+.cardHeader h2 {
+  font-weight: 600;
+  color: var(--peach);
 }
-.detail table tr td h2 span {
-  font-size: 14px;
-  color: var(--black2);
+.cardHeader .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: var(--peach);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
 }
-.detail table tr:hover {
-  background: var(--blue);
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.details table thead td {
+  font-weight: 600;
+}
+.details .recentOrders table tr {
+  color: var(--black1);
+  border-bottom: 1px solid #0000001a;
+}
+.details .recentOrders table tr:last-child {
+  border-bottom: none;
+}
+.details .recentOrders table tbody tr:hover {
+  background: var(--peach);
   color: var(--white);
 }
-.detail table tr:hover td h2 span {
-  color: var(--white);
+.details .recentOrders table tr td {
+  padding: 10px;
+}
+.details .recentOrders table tr td:last-child {
+  text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2) {
+  text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3) {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+  .recentOrders {
+    overflow-x: auto;
+  }
 }
 
 /* ===================Subscription Design ================ */
@@ -342,14 +365,14 @@ th{
 .wrapper{
   z-index: 5;
   background: #fff;
-  padding: 30px;
+  padding: 50px;
   text-align: center;
   max-width: 400px;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  top: 50%;
+  top: 60%;
   opacity: 1;
   pointer-events: auto;
   transition: all 0.3s ease;
@@ -395,17 +418,20 @@ th{
   margin-left: -3px;
 }
 form{
-  width: 98%;
+  width: 120%;
+}
+.field h4{
+  color: #3ab1ab;
 }
 form .field{
-  height: 45px;
+  height: 100px;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 120px;
 }
 form .field input{
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
+  width: 70%;
+  height: 0%;
+  border-radius: 10px;
   border: 1px solid #ccc;
   padding: 0 15px;
   outline: none;
@@ -465,6 +491,11 @@ form .btn button{
   background: #f8d7da;
   border: 1px solid #f5c6cb;
 }
+button {
+  position: relative;
+  padding: 7px;
+}
+
 
 /* ====================== Responsive Design ========================== */
 @media (max-width: 991px) {
@@ -592,5 +623,5 @@ td:before{
 
 .form input[type="submit"]:hover
 {
-    background: #9acd32 ;
+    background: #9acd32;
 }
