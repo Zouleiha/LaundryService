@@ -40,7 +40,7 @@
         <form class="form" action="employeeAdd.php" method="post" >
         
             <input type="text" name="name" placeholder="Name" id="username">
-            <input list="Designation" type="text" name="designation" placeholder="Designation" id="Designation">
+            <input list="Designation" type="text" name="designation" placeholder="Designation">
             <datalist id="Designation">
                 <option value="delivery man">
                 <option value="laundry man">

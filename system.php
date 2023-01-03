@@ -135,9 +135,9 @@
 			$this->disconnectWithDatabase();
 		}
 		public function updateCustomer($id, $name, $email, $password, $address, $phone){
-			$sql = "UPDATE customers (customer_id, customer_name, customer_email, customer_password, customer_address, customer_phone) 
-			VALUES ($id, '$name', '$email', '$password', '$address', '$phone')
-			WHERE customer_email='$email'";
+			$sql = "UPDATE customers (customer_id, customer_name, customer_email, customer_address, customer_phone) 
+			VALUES ($id, '$name', '$email', '$address', '$phone')
+			WHERE customer_password='$password'";
 			$this->connectWithDatabase();
 			$result = $this->dbconn->query($sql);
 			$this->disconnectWithDatabase();
